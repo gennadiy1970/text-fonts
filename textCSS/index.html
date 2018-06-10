@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2>Компоновка текста</h2>
+		<p>основные правила размещения и свойства</p>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+			<!-- <figcaption class="white">
+				<a href="http://fiftyfootshadows.net/">© John Carey</a>
+			</figcaption> -->
+		</figure>
+		<style>
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#cover p a {
+					color:#FFF;
+					}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Компоновка строки</h2>
+		<ol>
+			<li>Отступы <kbd>text-indent</kbd></li>
+			<li>Горизонтальное выравнивание <kbd>text-align</kbd></li>
+			<li>Вертикальное выравнивание <kbd>vertical-align</kbd></li>
+			<li>Расстояние между словами <kbd>word-spacing</kbd></li>
+			<li>Расстояние между буквами <kbd>letter-spacing</kbd></li>
+			<li>Обработка пробелов <kbd>white-space</kbd></li>
+			<li>Преобразование текста <kbd>text-transform</kbd></li>
+			<li>Оформление текста <kbd>text-decoration</kbd></li>
+			<li>Затенение текста <kbd>text-shadow</kbd></li>
+			<li>Перенос текста</li>
+		</ol>
+		<!-- <p class="note">Тесты по теме вебинара</p> -->
+	</section>
+
+	<section class="slide">
+		<h2>Отступ в первой строке абзаца:</h2>
+		<p> <strong class="mark">абзацный отступ или "красная строка"</strong></p>
+		<p class="result"><em>Lorem ipsum dolor sit amet, consectetur adipisicing</em> elit.
+			Ipsum odit voluptas velit fuga, amet, dicta. Eos error fuga, sint facere voluptate veniam dolorum.</p>
+		<pre>
+			<code class="mark">p { <span class="comment"> </span></code>
+			<code class="mark">&nbsp;&nbsp;&nbsp;&nbsp;text-indent: 40px; <span class="comment"> /* отступ */</span></code>
+			<code class="mark">&nbsp;&nbsp;&nbsp;&nbsp;text-align: justify;</code>
+			<code class="mark">}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Отступ в первой строке абзаца:</h2>
+		<p> <strong class="mark">"выступ"</strong></p>
+		<p class=" result result2"><em>Lorem ipsum dolor sit amet, consectetur
+			adipisicing elit.</em> Ipsum odit voluptas velit fuga, amet, dicta. Eos
+			error fuga, sint facere voluptate veniam dolorum.</p>
+		<pre>
+			<code class="mark">p { <span class="comment"> </span></code>
+			<code class="mark">&nbsp;&nbsp;&nbsp;&nbsp;text-indent: -20px; <span class="comment"> /* отрицательный отступ */</span></code>
+			<code class="mark">&nbsp;&nbsp;&nbsp;&nbsp;padding-left: 30px; <span class="comment"> /* отступ */</span></code>
+			<code class="mark">&nbsp;&nbsp;&nbsp;&nbsp;text-align: justify;</code>
+			<code class="mark">}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Отступ в первой строке абзаца:</h2>
+		<p>наследование: <strong class="mark"> div { <span class="mark"> &nbsp;<kbd>text-indent: 40px;</kbd> column-count: 2;</span> }</strong></p>
+		<div class="result double">
+		<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. </p> <p>Ut enim ad
+				 minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+				 aliquip ex ea commodo consequat. </p><p>Duis aute irure dolor in
+					 reprehenderit in voluptate velit esse.</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Горизонтальное выравнивание</h2>
+		<p>
+			<strong class="mark">text-align: </strong>
+			<em class="red">left </em>||
+			<em class="red">right </em>||
+			<em class="red">justify </em>||
+			<em class="red">center</em>
+		</p>
+     <p class="align-l align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium omnis architecto quisquam harum laboriosam quam, minus! Autem dolore magnam incidunt ad consequuntur, rem distinctio, maiores quo reprehenderit ipsam. Quis, aspernatur!</p>
+     <p class="align-r align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium omnis architecto quisquam harum laboriosam quam, minus! Autem dolore magnam incidunt ad consequuntur, rem distinctio, maiores quo reprehenderit ipsam. Quis, aspernatur!</p>
+     <p class="align-j align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium omnis architecto quisquam harum laboriosam quam, minus! Autem dolore magnam incidunt ad consequuntur, rem distinctio, maiores quo reprehenderit ipsam. Quis, aspernatur!</p>
+     <p class="align-c align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium omnis architecto quisquam harum laboriosam quam, minus! Autem dolore magnam incidunt ad consequuntur, rem distinctio, maiores quo reprehenderit ipsam. Quis, aspernatur!</p>
+	</section>
+
+	<section class="slide">
+		<h2>Вертикальное выравнивание</h2>
+    <p><strong>Межстрочный интервал = </strong> font-size + line-height.</p>
+		<img src="pictures/text.jpg" alt="line-height">
+		<p>базовая линия задается наибольшим шрифтом</p>
+	</section>
+
+	<section class="slide">
+		<h2>Вертикальное выравнивание</h2>
+    <p><strong>Расчет межстрочного интервала:</strong></p>
+
+			<pre><kbd>line-height: 64px</kbd>
+					<p><kbd>font-size: 50px</kbd></p>
+					<p class="line-height4"> 64px-50px  <em class="comment">// 14px / 2 = 7px сверху и снизу</em></p>
+					<p class="line-height-2"> 36px-50px <em class="comment">// -14px / 2 = -7px сверху и снизу</em></p>
+			<kbd>line-height: 36px</kbd>
+					<p><kbd>font-size: 50px</kbd></p>
+		</pre>
+
+	</section>
+
+	<section class="slide">
+		<h2>Вертикальное выравнивание</h2>
+    <p>Строка с текстом формируется так-же как inline-block: </p>
+		<ol>
+			<li>глиф(визуальный символ) формирует <kbd> content area</kbd></li>
+			<li>content area формирует <kbd>inline box</kbd></li>
+			<li>line-height - это аналог padding-top и padding-bottom (top == bottom)</li>
+			<li>base-line - также линия выравнивания по умолчанию, которую можно заменить на <br>
+				<kbd>top, text-top, botoom, middle, sub, super, text-bottom.</kbd>
+			</li>
+		</ol>
+
+	</section>
+
+	<section class="slide">
+		<h2>Вертикальное выравнивание</h2>
+    <p>
+			<strong>vertical-align:</strong>
+			<em class="red">top</em>
+		</p>
+			<p><kbd>top</kbd> Выравнивает верх inline-block по верхней границе содержащего его контейнера строки</p>
+			<img src="pictures/top.jpg" alt="top" width="600">
+	</section>
+	<section class="slide">
+		<h2>Вертикальное выравнивание</h2>
+    <p>
+			<strong>vertical-align:</strong>
+			<em class="red">bottom</em>
+		</p>
+			<p><kbd>bottom</kbd>Выравнивает низ inline-block по нижней границе содержащего его контейнера строки. </p>
+			<img src="pictures/bottom.jpg" alt="bottom" width="600">
+	</section>
+
+	<section class="slide">
+		<h2>Вертикальное выравнивание</h2>
+    <p>
+			<strong>vertical-align:</strong>
+			<em class="red">middle</em>
+		</p>
+			<p>
+				<kbd>middle</kbd>
+				Совмещает середину вертикали строкового блока элемента с половиной высоты буквы
+				<srrong class="red">x</srrong> (или половину высоты элемента).
+			</p>
+			<img src="pictures/middle.jpg" alt="middle" width="600">
+	</section>
+
+	<section class="slide">
+		<h2>Вертикальное выравнивание</h2>
+    <p>
+			<strong>vertical-align:</strong>
+			<em class="red">text-top</em>
+		</p>
+			<p>
+				<kbd>text-top</kbd>
+				Верхняя граница элемента выравнивается по самому высокому текстовому
+				элементу текущей строки. Наиболее высокий элемент находится на нижней линии строкового блока.
+			</p>
+			<img src="pictures/texttop.jpg" alt="texttop" width="500">
+	</section>
+
+
+		<section class="slide">
+			<h2>Вертикальное выравнивание</h2>
+	    <p>
+				<strong>vertical-align:</strong>
+				<em class="red">text-bottom</em>
+			</p>
+				<p>
+					<kbd>text-bottom</kbd>
+					Нижняя граница элемента выравнивается по самому высокому текстовому
+					элементу текущей строки. Наиболее высокий элемент находится на верхней линии строкового блока.
+				</p>
+				<img src="pictures/textbottom.jpg" alt="text-bottom" width="600">
+		</section>
+
+
+	<section class="slide">
+		<h2>Расстояния между словами</h2>
+		<p><strong>word-spacing:</strong> <em class="red">normal</em> || <em class="red">inherit </em> ||<em class="red"> любое числовое значение</em></p>
+		<p><strong>word - </strong> это любая строка, не содержащая символов 
+			разделителей и ограниченная такими символами с обеих сторон.
+		</p>
+		<p><strong>зависит </strong> от <kbd>text-align: justify;</kbd> - word-spacing может быть изменено этим свойством.</p>
+    <ul>
+    	<li class="word_spaсing0"> <kbd>normal</kbd> соотвествует значению 0</li>
+    	<li class="word_spaсing2"> <kbd>1rem</kbd> увеличивает расстояние</li>
+    	<li class="word_spaсing-2"> <kbd>-0.3rem</kbd> уменьшает расстояние</li>
+    </ul>
+		<p><strong>наследуется</strong> вычисленное значение, а не коффициент.</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Расстояния между буквами</h2>
+		<p><strong>letter-spacing:</strong> <em class="red">normal</em> || <em class="red">inherit </em> ||<em class="red"> любое числовое значение</em></p>
+		<p><strong>зависит </strong> от <kbd>text-align: justify;</kbd>  только если <kbd>word-spacing: normal</kbd> может быть изменено этим свойством.</p>
+    <ul>
+    	<li class="letter_spaсing0"> <kbd>normal</kbd> соотвествует значению 0</li>
+    	<li class="letter_spaсing2"> <kbd>0.5rem</kbd> увеличивает расстояние</li>
+    	<li class="letter_spaсing-2"> <kbd>-0.08rem</kbd> уменьшает расстояние</li>
+    </ul>
+		<p><strong>наследуется</strong> вычисленное значение, а не коффициент.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Обработка пробелов</h2>
+		<p><strong>white-space:</strong>
+			<em class="red"> normal</em> ||
+			<em class="red"> nowrap </em> ||
+			<em class="red"> pre </em> ||
+			<em class="red"> pre-wrap </em> ||
+			<em class="red"> pre-line </em> ||
+		</p>
+		<!-- <p><strong>зависит </strong> от <kbd>text-align: justify;</kbd>  только если <kbd>word-spacing: normal</kbd> может быть изменено этим свойством.</p> -->
+    <ul>
+    	<li>
+				<kbd>normal</kbd>
+				<span class="grey"> пробелы игнорируются</span>,
+				<spap class="dgreen">перенос строк обрабатывается</spap>,
+				<span class="dblue">автоматический перенос строк разрешен</span>
+			</li>
+    	<li >
+				<kbd>nowrap</kbd>
+				<spap class="dgreen">перенос строк </spap> игнорируются,
+				<span class="dblue">автоматический перенос строк </span> запрещен
+			</li>
+    	<li >
+				<kbd>pre</kbd>
+				<span class="grey"> пробелы </span>сохраняются,
+				<span class="dblue">автоматический перенос строк </span> запрещен
+			</li>
+    	<li >
+				<kbd>pre-wrap</kbd>
+				<span class="grey"> пробелы </span>сохраняются,
+			</li>
+    	<li >
+				<kbd>pre-line</kbd>
+				<spap class="dgreen">перенос строк </spap> игнорируются
+			</li>
+    </ul>
+		<!-- <p><strong>наследуется</strong> вычисленное значение, а не коффициент.</p> -->
+	</section>
+
+	<section class="slide">
+		<h2>Преобразование текста</h2>
+		<p><strong>text-transform:</strong>
+			<em class="red">none</em> ||
+			<em class="red">uppercase </em> ||
+			<em class="red"> lowercase </em> ||
+			<em class="red"> capitalize </em> ||
+			<em class="red"> inherit </em>
+		</p>
+    <ul>
+    	<li> <kbd>none</kbd> Преобразование текста</li>
+    	<li class="upper"> <kbd>uppercase</kbd> преобразование текста</li>
+    	<li class="lower"> <kbd>lowercase</kbd> преобразование текста</li>
+    	<li class="capit"> <kbd>capitalize</kbd> преобразование текста</li>
+    </ul>
+		<p><strong>наследуется</strong> - заданное значение, для изменения необходимо переопределить.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Оформление текста</h2>
+		<p><strong>text-decoration:</strong>
+			<em class="red">none</em> ||
+			<em class="red">underline </em> ||
+			<em class="red"> overline </em> ||
+			<em class="red"> linethrough </em> ||
+			<em class="red"> blink </em> ||
+			<em class="red"> inherit </em>
+		</p>
+    <ul>
+    	<li> <kbd>none</kbd> Оформление текста</li>
+    	<li class="under"> <kbd>underline</kbd> solid green</li>
+    	<li class="overl"> <kbd>overline</kbd> dotted red </li>
+    	<li class="through"> <kbd>parent {text-transform: line-through dashed; color: blue;}</kbd> <span class="red">child: {color: red;}</span> <span class="comment">/* цвет paren передается линии, цвет линии потомка не изменился*/</span></li>
+    	<li class="blink"> <kbd>blink</kbd> Оформление текста</li>
+    </ul>
+		<p><strong>не наследуется</strong> но применяется ко всему блоку.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Затенение текста</h2>
+		<p><strong>text-shadow:</strong>
+			<em class="red">цвет</em> |
+			<em class="red">смещение X </em> |
+			<em class="red"> смещение Y </em> |
+			<em class="red"> радиус размытия тени </em>
+		</p>
+    <ul>
+    	<li class="ts_x"> <kbd>text-shadow:</kbd> 5px 0 0 hsla(0, 0%, 0%, 0.5)</li>
+    	<li class="ts_y"> <kbd>text-shadow:</kbd> 0 5px 0 hsla(0, 0%, 0%, 0.5)</li>
+    	<li class="ts_r"> <kbd>text-shadow:</kbd> 0  0 5px hsla(0, 0%, 0%, 0.5)</li>
+    	<li class="ts_all"> <kbd>text-shadow:</kbd> 5px 5px 5px hsla(0, 0%, 0%, 0.5)</li>
+    	<li class="ts_light"> <kbd>text-shadow:</kbd> -2px 2px 0px hsla(0, 0%, 100%, 0.5), <br>
+  <span class="ml208">-4px 4px 0px hsla(0, 0%, 100%, 0.2);</span>
+			</li>
+    </ul>
+		<p><strong>наследуется</strong> - заданное значение, для изменения необходимо переопределить.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Перенос текста. HTML</h2>
+		<p><strong>&lt;br&gt;</strong>  перенос текста <span class="comment"> // всегда</span></p>
+		<p><strong>&lt;wbr&gt;</strong>  перенос текста <span class="comment"> // на усмотрение браузера без дефиса</span></p>
+		<p><strong>&amp;shy;</strong>  перенос текста <span class="comment"> // на усмотрение браузера c дефисом</span></p>
+   
+		<p><strong>не наследуется</strong></p>
+	</section>
+
+	<section class="slide">
+		<h2>Перенос текста. CSS</h2>
+		<ul>
+			<li><strong>word-break: </strong>
+				<ul>
+					<li class="red">break-all <span class="comment">// перенос символов букв и цифр</span></li>
+					<li>keep-all</li>
+					<li>break-word <span class="comment">// перенос слов</span></li>
+				</ul>
+			</li>
+			<li class="red"><strong>overflow-wrap:</strong> break-word</li>
+			<li><strong>hyphens: </strong>
+				<ul>
+					<li>manual</li>
+					<li class="red">auto</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<p><a href="https://codepen.io/Gorbulin/pen/VdPpjq" target="_blank">Примеры</a></p>
+		<p><strong>не наследуется</strong></p>
+	</section>
+	<!-- <section class="slide">
+		<h2>All kind of lists</h2>
+		<ol>
+			<li>Simple lists are marked with bullets</li>
+			<li>Ordered lists begin with a number</li>
+			<li>You can even nest lists one inside another
+				<ul>
+					<li>Or mix their types</li>
+					<li>But do not go too far</li>
+					<li>Otherwise audience will be bored</li>
+				</ul>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Serious citations</h2>
+		<figure>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia.</p>
+			</blockquote>
+			<figcaption>Marcus Tullius Cicero</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>Code samples</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code class="mark">&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Even tables</h2>
+		<table>
+		<tr>
+			<th scope="col">Locavore</th>
+			<th>Umami</th>
+			<th>Helvetica</th>
+			<th>Vegan</th>
+		</tr>
+		<tr>
+			<th scope="row">Fingerstache</th>
+			<td>Kale</td>
+			<td>Chips</td>
+			<td>Keytar</td>
+		</tr>
+		<tr>
+			<th scope="row">Sriracha</th>
+			<td>Gluten-free</td>
+			<td>Ennui</td>
+			<td>Keffiyeh</td>
+		</tr>
+		<tr>
+			<th scope="row">Thundercats</th>
+			<td>Jean</td>
+			<td>Shorts</td>
+			<td>Biodiesel</td>
+		</tr>
+		<tr>
+			<th scope="row">Terry</th>
+			<td>Richardson</td>
+			<td>Swag</td>
+			<td>Blog</td>
+		</tr>
+		</table>
+		<p>It’s good to have information organized.</p>
+	</section>
+
+	<section class="slide" id="picture">
+		<h2>Pictures</h2>
+		<figure>
+			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
+			<figcaption class="white">
+				<a href="http://fiftyfootshadows.net/">© John Carey</a>
+			</figcaption>
+		</figure>
+		<style>
+			#picture h2 {
+				color:#FFF;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">You can even shout this way</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Inner navigation</h2>
+		<ol>
+			<li>Lets you reveal list items one by one</li>
+			<li class="next">To keep some key points</li>
+			<li class="next">In secret from audience</li>
+			<li class="next">But it will work only once</li>
+			<li class="next">Nobody wants to see the same joke twice</li>
+		</ol>
+	</section>
+
+	<section class="slide grid">
+		<h2>All nicely aligned to grid</h2>
+	</section> -->
+
+	<section class="slide" id="see-more">
+		<h1>Спасибо за внимание!</h1>
+      <p>В типографике еще много интересного!</p>
+			<img src="pictures/Typography_Line_Terms.svg" alt="Typography_Line_Terms">
+	</section>
+
+	<!-- <footer class="badge">
+		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+	</footer> -->
+
+	<!-- <div class="progress"></div> -->
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+</html>

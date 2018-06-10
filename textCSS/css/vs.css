@@ -1,0 +1,95 @@
+.middle > img {
+  vertical-align: middle;
+}
+
+.top > img {
+  vertical-align: top;
+}
+
+.bottom > img {
+  vertical-align: bottom;
+}
+
+.sub > img {
+  vertical-align: sub;
+}
+
+.super > img {
+  vertical-align: super;
+}
+
+.text-top > img {
+  vertical-align: text-top;
+}
+
+.text-bottom > img {
+  vertical-align: text-bottom;
+}
+
+.baseline > img {
+  vertical-align: baseline;
+}
+
+.pixel > img {
+  vertical-align: 50px;
+}
+
+.percentage > img {
+  vertical-align: -100%;
+}
+
+.box {
+  font-size: 0;
+  width: 800px;
+  height: 350px;
+  margin: 50px auto;
+  background: hsla(120, 50%, 50%, 0.5);
+  white-space: nowrap;
+  position: relative;
+  line-height: 350px;
+}
+
+.box::after {
+  content: "";
+  width: 800px;
+  height: 74px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #000;
+  position: absolute;
+  top: 175px;
+  left: 0;
+}
+
+.box::before {
+  content: "baseline";
+  position: absolute;
+  top: 69px;
+  right: 50px;
+}
+
+body {
+  padding: 20px;
+  background: #eee;
+}
+
+h2 {
+  position: absolute;
+  top: 110px;
+  right: 175px;
+  margin: 0;
+  width: 150px;
+  text-align: right;
+  font: bold 20px Sans-Serif;
+  color: #eee;
+  font-size: 46px;
+}
+
+.wrapper {
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+/*div {
+  margin: 0 0 30px 0;
+  padding: 10px;
+  background: white;
+}*/

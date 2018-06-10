@@ -1,0 +1,108 @@
+:root {
+  --first-color: #3A0088;
+  --second-color: #930077;
+  --third-color: #E61C5D;
+  --contrast-color: #FFBD39;
+  --text-color: #fff;
+  --fz: 16px;
+}
+
+body {
+  background: var(--first-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-color);
+  text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.4);
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.625rem;
+}
+h4 {
+  text-align: center;
+}
+p, li, th, td {
+  font-size: 1.375rem;
+  
+}
+th, td {
+  width: 10rem;
+  text-align: left;
+  border-bottom: 1px solid var(--contrast-color);
+}
+.slide {
+  padding: 0 4.6875rem ;
+  box-sizing: border-box;
+}
+.red {
+  color: var(--third-color);
+  font-weight: bold;
+}
+
+.accent,
+a {
+  color: var(--contrast-color);
+}
+
+.wrp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  height: 3.75rem;
+  margin: 1.5625rem auto;
+  background: #930077;
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.px {
+  width: 96px;
+}
+
+.in {
+  width: 1in;
+}
+
+.cm {
+  width: 2.54cm;
+}
+
+.mm {
+  width: 25.4mm;
+}
+
+.pt {
+  width: 72pt;
+}
+
+.pc {
+  width: 6pc;
+}
+.img-rfloat {
+  float: right;
+}
+
+.grey {
+  color: lightgray;
+}
+.glif1 {
+  font-family: 'Bad Script',  cursive;
+}
+.glif2 {
+  font-family: 'Bad Script', cursive;
+}

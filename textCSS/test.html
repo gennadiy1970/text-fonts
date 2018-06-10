@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+     body {font-size: 48px;}
+     .text-big {
+       font-size: 200%;
+       background-color: hsla(190, 80%, 80%, 0.8);
+       /*vertical-align: middle;*/
+       vertical-align: text-top;
+       /*vertical-align: top;*/
+     }
+     .text-small {
+       /*vertical-align: top;*/
+       vertical-align: text-top;
+       /*vertical-align: middle;*/
+       font-size: 75%;
+       background-color: hsla(190, 80%, 80%, 0.8);
+     }
+     .text-middle {
+       /*vertical-align: top;*/
+       vertical-align: text-top;
+       font-size: 100%;
+       background-color: hsla(130, 80%, 80%, 0.8);
+       /*vertical-align: middle;*/
+     }
+     p {
+       background-color: hsla(110, 80%, 80%, 0.4);
+       line-height: 2;
+       width: 900px;
+     }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <title>V-text</title>
+</head>
+<body>
+ <p>
+   <span class="text-middle">A line </span>
+   <span class="text-big">box</span>
+   <span class="text-middle">containing</span>
+   <span class="text-small">same </span>
+   <span class="text-middle">text.</span>
+ </p>
+</body>
+</html>

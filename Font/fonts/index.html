@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fonts</title>
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fullpage.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="./js/scrolloverflow.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Philosopher" rel="stylesheet">
+  <script type="text/javascript" src="./js/jquery.fullpage.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- <div id="header">Units in CSS</div> -->
+  <div id="fullpage">
+    <div class="section">
+      <h1>Подключение шрифтов CSS</h1>
+      <div class="slide">
+        <h2>Терминология</h2>
+        <p><span class="accent">Глиф</span> -  графическое представление символа. Например символ кириллицы " ї " можно записать прописью <i class="glif1">" ї "</i>, с большой буквы <i class="glif2">" Ї "</i> и т.п. - все это
+        будут разные глифы одного символа.</p>
+        <p>
+          <span class="accent">Шрифт</span> -  Набор глифов одного стиля. Причем шрифт может содержать глифов меньше или больше чем число символов языка, т.е. шрифт зависит от задач визуализации
+          и не обязан полностью описывать все возможные символы.
+         </p>
+        <p><span class="accent">Character set</span> - таблица, задающая кодировку множествe символов алфавита (обычно элементов текста: букв, цифр, знаков препинания).
+        Такая таблица сопоставляет каждому символу последовательность длиной в один или несколько символов другого алфавита (нулей и единиц (битов) в компьютере, точек
+        и тире в коде Mорзе, сигнальных флагов на флоте).</p>
+        <img src="./img/drawing.svg" alt="byte" width="400">
+        <img src="./img/drawing2.svg" alt="byte" width="400">
+        <img src="./img/drawing3.svg" alt="byte" width="400">
+      </div>
+      <div class="slide">
+        <h2>CSS: font-family</h2>
+        <h3>Стандартные шрифты</h3>
+        <pre class="accent" style="font-size: 24px;">font-family: "Arial Black", "Helvetica CY", "Nimbus Sans L" sans-serif;</pre>
+        <p>Подключение стандартных шрифтов работает только если у пользователя в системе есть такой шрифт.</p>
+        <table>
+          <caption>Шрифты поддерживающие кириллицу</caption>
+          <tr>
+            <th>Windows</th>
+            <th>Mac OS</th>
+            <th>Unix/Linux</th>
+            <th>семейство</th>
+          </tr>
+          <tr>
+            <td>Arial</td>
+            <td>Helvetica</td>
+            <td>Ubuntu</td>
+            <td>sans-serif</td>
+          </tr>
+          <tr>
+            <td>“Times New Roman”</td>
+            <td>Times</td>
+            <td>Segoe</td>
+            <td>serif</td>
+          </tr>
+        </table>
+        <p>Важно указывать правильный порядок указания типов, т.к. браузер подключит первый, который сможет найти или скачать.
+          Поиск начинается с крайнего левого типа.</p>
+        <p>При отсутствии в системе перечисленных типов стоит указать семейтво:</p>
+        <ul>
+          <li>
+            <span class="accent">serif</span> - шрифт с засечками</li>
+          <li>
+            <span class="accent">sans-serif</span> - шрифт без засечек</li>
+          <li>
+            <span class="accent">monospace</span> - шрифт с глифами равной ширины</li>
+          <li>
+            <span class="accent">cursive</span> - наклонный шрифт</li>
+          <li>
+            <span class="accent">fantasy</span> - декоративный фонт</li>
+          <li>
+            <span class="accent">system-ui</span> - системные шрифты из оболочки ОС</li>
+        </ul>
+
+      </div>
+      <div class="slide">
+        <h2>CSS: @font-face</h2>
+        <h3>Подгружаемые шрифты</h3>
+        <p>
+          <span class="accent">@font-face</span> - это инструкция как загрузить указанный шрифт.
+        </p>
+        <pre class="accent" style="font-size: 24px;">
+ @font-face { 
+    font-family: "League Gothic";<span class="grey">                   // присвоим имя </span>
+    src: url('fonts/League_Gothic-webfont.ttf');   <span class="grey">// укажим путь к файлу css </span>
+  } 
+</pre>
+        <!-- <pre class="accent" style="font-size: 24px;">Порядок: EOT, WOOF2, WOFF, TTF, SVG.</pre> -->
+        <h3>Формат шрифтов</h3>
+        <ul>
+          <li>
+            <span class="accent">EOT</span> или Embedded Open Type: IE</li>
+          <li>
+            <span class="accent">SVG</span>: iOS Safari
+          </li>
+          <li>
+            <span class="accent">TTF</span>: все браузеры, но большой объем
+          </li>
+          <li>
+            <span class="accent">WOFF</span>: все браузеры, сжатая версия TTF/OTF
+          </li>
+          <li>
+            <span class="accent">WOFF2</span>: большая часть браузеров, сжатая версия TTF/OTF
+          </li>
+        </ul>
+        <p>Можно указать несколько путей с разными форматами шрифтов. Подключаться будет первый найденный и скачанный (начало
+          - вверху).</p>
+        <p>Поддержку браузерами формата шрифтов всегда можно проверить на
+          <a href="https://caniuse.com" target="_blank">caniuse</a>
+        </p>
+      </div>
+      <div class="slide">
+        <h2>CSS: @font-face</h2>
+        <h3>Подгружаемые шрифты: правила</h3>
+        <p>Один шрифт - одна директива @font-face</p>
+        <p>Если название шрифта разделено пробелом, то название надо брать в кавычки.</p>
+        <p>Отдельный файл шрифта содержит только одну плотность и один стиль для этого шрифта.</p>
+
+      </div>
+      <div class="slide">
+        <h2>CSS: @font-face</h2>
+        <h3>Подгружаемые шрифты: правила</h3>
+        <p>Как подключать разные версии плотность и стилей на одно и то же имя font-family</p>
+        <pre class="accent" style="font-size: 24px;">
+<span class="grey">/* обычный шрифт */</span>
+@font-face { font-family: '<b>PTSans</b>'; <span class="grey"> указываем семейство шрифтов, а не имя шрифта: PTSansRegular</span>
+    url('<b>PTSansRegular</b>.woof') format('woff'),
+ url('<b>PTSansRegular</b>') format('truetype'),
+ url('<b>PTSansRegular</b>.svg') format('svg');
+    <b>font-weight: normal; </b>
+    <b>font-style: normal;</b>
+}
+<span class="grey">/* италик */</span>
+@font-face { font-family: '<b>PTSans</b>';
+    url('<b>PTSansItalic</b>.woof') format('woff'),
+    url('<b>PTSansItalic</b>.ttf') format('truetype'),
+    url('<b>PTSansItalic</b>.svg') format('svg');
+    font-weight: normal; 
+    <b>font-style: italic</b>;
+}
+</pre>
+      </div>
+      <div class="slide">
+        <h2>CSS: @font-face</h2>
+        <h3>Подгружаемые шрифты: правила</h3>
+        <p>Как подключать разные версии плотность и стилей на одно и то же имя font-family</p>
+        <pre class="accent" style="font-size: 24px;">
+<span class="grey">/* полужирный */</span>
+@font-face { font-family: '<b>PTSans</b>'; 
+ url('<b>PTSansBold</b>.woof') format('woff'),
+ url('<b>PTSansBold</b>') format('truetype'),
+ url('<b>PTSansBold</b>.svg') format('svg');
+    <b>font-weight: bold; </b>
+    font-style: normal;
+}
+<span class="grey">/* комбинированный */</span>
+@font-face { font-family: '<b>PTSans</b>';
+    url('<b>PTSansBoldItalic</b>.woof') format('woff'),
+    url('<b>PTSansBoldItalic</b>.ttf') format('truetype'),
+    url('<b>PTSansBoldItalic</b>.svg') format('svg');
+    <b>font-weight: bold; </b>
+    <b>font-style: italic</b>;
+}
+</pre>
+      </div>
+    </div>
+    <div class="section">
+      <h1>Правовые вопросы использования веб-шрифтов</h1>
+      <h2>Веб-шрифты это ЧАСТНАЯ СОБСТВЕННОСТЬ</h2>
+      <h4>Примеры:
+        <a href="http://corporate.mcdonalds.com/content/mcd/our_company/our-ambition.html">Макдональдс</a> и
+        <a href="http://www.nytimes.com/?WT.z_jog=1&hF=t&vS=undefined">Нью-Йорк Таймс</a>
+      </h4>
+      <h2><span class="accent">Ответственность</span> за внесение шрифта на сайт несет <span class="accent">ВЕРСТАЛЬЩИК</span>, а не заказчик.</h2>
+<h3 style="margin-left: 200px;">Бесплатные шрифты:</h3>
+      <ul style="margin-left: 150px;">
+<li>
+<a href="www.theleagueofmoveabletype.com" target="_blank">The League of Movable Type</a>
+</li>
+<li>
+<a href="www.exljbris.com" target="_blank">Exljbris Font Foundry</a>
+</li>
+<li>
+<a href="www.fontex.org" target="_blank">Fontex.org - не все лицензированы для коммерческого использования</a>
+</li>
+<li>
+<a href="http://openfontlibrary.org" target="_blank">The Open Font Library - более 150 бесплатных шрифтов</a>
+</li>
+<li>
+<a href="www.fontsquirrel.com" target="_blank">Font Squirrel - более 800 шрифтов + @font-face Kits + @fontface -синтаксис + конвертор .ttf/.otf в другие форматы</a>
+</li>
+<li>
+<a href="http://www.google.com/webfonts" target="_blank">Google Fonts</a>
+</li>
+      </ul>
+      <!-- <div class="slide">
+        <h2>Hello</h2>
+      </div>
+      <div class="slide">
+        <h2>Hello</h2>
+      </div>
+      <div class="slide">
+        <h2>Hello</h2>
+      </div> -->
+    </div>
+    <div class="section">
+      <h1>Подключени шрифтов GOOGLE FONTS</h1>
+      <div class="slide">
+        <h2>Удаленное подключение</h2>
+<h3>
+<a href="https://fonts.google.com/"> Google Fonts
+</a>
+</h3>
+      </div>
+      <div class="slide">
+        <h2>Локальное подключение</h2>
+<h3>
+<a href="https://google-webfonts-helper.herokuapp.com/fonts">google webfonts helper</a>
+</h3>
+      </div>
+      <!-- <div class="slide">Slide 3</div> -->
+    </div>
+    <!-- <div class="section">
+      <h1>Типографика и терминология</h1>
+      <div class="slide">
+      <h1>Основные правила типографики для недизайнеров.</h1>
+        <ul>
+          <li>в строке должно находится не более 65-75 символов</li>
+          <li>межстрочный интервал стоит устанавливать как 120% от размера текста или 1,2 единицы</li>
+          <li>отступ между параграфами стоит делать равным размеру основного текста</li>
+          <li>заголовок — обычно составляет 180–200% от размера основного шрифта</li>
+          <li>подзаголовок — 130–150% от размера основного шрифта</li>
+        </ul>
+      </div>
+      <div class="slide">
+        <h1>Типографика: размеры</h1>
+
+      </div>
+      <div class="slide">Slide 3</div>
+    </div> -->
+  </div>
+  <!-- <div class="footer"> Kharkiv, 2018 &copy; </div> -->
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
