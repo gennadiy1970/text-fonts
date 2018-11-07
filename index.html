@@ -39,62 +39,65 @@
             margin: .5rem;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" integrity="sha256-HtCCUh9Hkh//8U1OwcbD8epVEUdBvuI8wj1KtqMhNkI="
+    crossorigin="anonymous" />
 </head>
 
 <body>
     <ul>
-        <li>
+        <li class="wow slideInRight">
             <a href="./Example/index.html">
                 <h3>Text + Fonts + Background + Img</h3>
             </a>
             <iframe src="./Example/index.html" frameborder="0"></iframe>
         </li>
-        <li>
+        <li class="wow slideInLeft">
             <a href="./textTags/index.html">
                 <h3>Tags для текста</h3>
             </a>
             <iframe src="./textTags/index.html" frameborder="0"></iframe>
         </li>
-        <li><a href="./textCSS/index.html">
+        <li class="wow slideInRight">
+            <a href="./textCSS/index.html">
                 <h3>CSS для текста</h3>
             </a>
             <iframe src="./textCSS/index.html" frameborder="0"></iframe>
         </li>
-        <li>
+        <li class="wow slideInLeft">
             <a href="http://designwithfontforge.com/en-US/What_Is_a_Font.html">
                 <h3>Как создаются шрифты</h3>
                 <p>Нескучная документация к программе FontForge с иллюстрациями</p>
             </a>
             <iframe src="http://designwithfontforge.com/en-US/What_Is_a_Font.html" frameborder="0"></iframe>
         </li>
-        <li>
+        <li class="wow slideInRight">
             <a href="./Font/index.html">
                 <h3>Шрифты</h3>
                 <p>Особенности отображения шрифтов в браузерах</p>
             </a>
             <iframe src="./Font/index.html" frameborder="0"></iframe>
         </li>
-        <li>
+        <li class="wow slideInLeft">
             <a href="./Font/fonts/index.html">
                 <h3>Подключение шрифтов</h3>
                 <p>fonts.google.com и CSS</p>
             </a>
             <iframe src="./Font/fonts/index.html" frameborder="0"></iframe>
         </li>
-        <li>
+        <li class="wow slideInRight">
             <h3>img vs background-image</h3>
             <p>CSS служит для оформления страниц. Поэтому все картинки, которые являются частью этого самого оформления
                 должны быть вынесены в CSS. Картинки, которые относятся к содержанию страниц вставляем тегом</p>
         </li>
-        <li>
+        <li class="wow slideInLeft">
             <h3><a href="https://gennadiy1970.github.io/background/">background</a></h3>
             <iframe src="https://gennadiy1970.github.io/background/" frameborder="0"></iframe>
         </li>
-        <li>
+        <li class="wow slideInRight">
             <h3><a href="./Img/index.html">Img? object-fit!</a></h3>
             <iframe src="./Img/index.html" frameborder="0"></iframe>
         </li>
-        <li>
+        <li class="wow slideInLeft">
             <a href="https://gennadiy1970.github.io/css-mixBlendMode/">
                 <h3>background + background = mix-blend-mode</h3>
             </a>
@@ -102,6 +105,11 @@
             <iframe src="https://gennadiy1970.github.io/css-mixBlendMode/" frameborder="0"></iframe>
         </li>
     </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U="
+crossorigin="anonymous"></script>
+<script>
+    (new WOW()).init();
+</script>
 </body>
 
 </html>
