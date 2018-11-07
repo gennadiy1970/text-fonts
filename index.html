@@ -1,36 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Font, Text, BG</title>
+    <base target="_blank">
     <style>
         body {
-            background: navy;
-            color: #fff;
+            color: #335;
             font-family: sans-serif;
             font-size: 24px;
             padding: 25px;
         }
+
         a {
             text-decoration: none;
-            color: #fff;
+            color: #335;
         }
+
         ul {
             width: 768px;
             margin: auto;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            text-indent: 2rem;
+            box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            margin: .5rem;
         }
     </style>
 </head>
+
 <body>
     <ul>
-        <li><a href="https://codepen.io/Gorbulin/pen/eKgggp">Пример</a></li>
-        <li><a href="http://designwithfontforge.com/en-US/Planning_Your_Project.html">Как создаются шрифты</a></li>
-        <li><a href="./textTags/index.html">Теги для текста</a></li>
-        <li><a href="./textCSS/index.html">CSS для текста</a></li>
-        <li><a href="./Font/index.html">Шрифты</a></li>
-        <li><a href="./Font/fonts/index.html">Подключение шрифтов</a></li>
+        <li>
+            <a href="./Example/index.html">
+                <h3>Text + Fonts + Background + Img</h3>
+            </a>
+            <iframe src="./Example/index.html" frameborder="0"></iframe>
+        </li>
+        <li>
+            <a href="./textTags/index.html">
+                <h3>Tags для текста</h3>
+            </a>
+            <iframe src="./textTags/index.html" frameborder="0"></iframe>
+        </li>
+        <li><a href="./textCSS/index.html">
+                <h3>CSS для текста</h3>
+            </a>
+            <iframe src="./textCSS/index.html" frameborder="0"></iframe>
+        </li>
+        <li>
+            <a href="http://designwithfontforge.com/en-US/What_Is_a_Font.html">
+                <h3>Как создаются шрифты</h3>
+                <p>Нескучная документация к программе FontForge с иллюстрациями</p>
+            </a>
+            <iframe src="http://designwithfontforge.com/en-US/What_Is_a_Font.html" frameborder="0"></iframe>
+        </li>
+        <li>
+            <a href="./Font/index.html">
+                <h3>Шрифты</h3>
+                <p>Особенности отображения шрифтов в браузерах</p>
+            </a>
+            <iframe src="./Font/index.html" frameborder="0"></iframe>
+        </li>
+        <li>
+            <a href="./Font/fonts/index.html">
+                <h3>Подключение шрифтов</h3>
+                <p>fonts.google.com и CSS</p>
+            </a>
+            <iframe src="./Font/fonts/index.html" frameborder="0"></iframe>
+        </li>
+        <li>
+            <h3>img vs background-image</h3>
+            <p>CSS служит для оформления страниц. Поэтому все картинки, которые являются частью этого самого оформления
+                должны быть вынесены в CSS. Картинки, которые относятся к содержанию страниц вставляем тегом</p>
+        </li>
+        <li>
+            <h3><a href="https://gennadiy1970.github.io/background/">background</a></h3>
+            <iframe src="https://gennadiy1970.github.io/background/" frameborder="0"></iframe>
+        </li>
+        <li>
+            <h3><a href="./Img/index.html">Img? object-fit!</a></h3>
+            <iframe src="./Img/index.html" frameborder="0"></iframe>
+        </li>
+        <li>
+            <a href="https://gennadiy1970.github.io/css-mixBlendMode/">
+                <h3>background + background = mix-blend-mode</h3>
+            </a>
+            <p>CSS свойство mix-blend-mode определяет режим смешивания цветов выбранного элемента с низлежащими слоями.</p>
+            <iframe src="https://gennadiy1970.github.io/css-mixBlendMode/" frameborder="0"></iframe>
+        </li>
     </ul>
 </body>
+
 </html>

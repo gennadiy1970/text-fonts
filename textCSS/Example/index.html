@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hyphens</title>
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            max-width: 960px;
+            margin: auto;
+            box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+            padding: 1rem;
+        }
+
+        .box {
+            width: 280px;
+            margin: 0 auto 25px;
+            box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+            color: #335;
+            font-size: 24px;
+            padding: 1rem;
+            word-spacing: 2px;
+            font-style: italic;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .wb-all {
+            word-break: break-all;
+        }
+
+        .wb-word {
+            word-break: break-word;
+        }
+
+        .wb-keep {
+            word-break: keep-all;
+        }
+
+        .hp-manual {
+            hyphens: manual;
+        }
+
+        .hp-auto {
+            hyphens: auto;
+        }
+
+        .ow {
+            overflow-wrap: break-word
+        }
+
+        i {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            Восьмидесяти<i>wbr</i><wbr>четырёхлетняя константинопольская делопроизво<i>wbr</i><wbr>дительница
+             поставила оценку неудовлетворительно одиннадцатиклас<i>wbr</i><wbr>снице.
+        </div>
+            <div class="box">
+                Восьмидесяти&shy;<i>&amp;shy</i>четырёхлетняя константинопольская делопроизво&shy;<i>&amp;shy</i>дительница
+                поставила
+                оценку неудовлетворительно одиннадцатиклас&shy;<i>&amp;shy</i>снице.
+
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="box wb-all"><i>word-break: break-all</i>
+                Восьмидесятичетырёхлетняя константинопольская делопроизводительница
+                поставила оценку неудовлетворительно одиннадцатикласснице.
+            </div>
+            <div class="box wb-word"><i>word-break: break-word</i>
+                Восьмидесятичетырёхлетняя константинопольская делопроизводительница
+                поставила оценку неудовлетворительно одиннадцатикласснице.
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="box wb-keep"><i>word-break: keep-all</i>
+                Восьмидесятичетырёхлетняя константинопольская делопроизводительница
+                поставила оценку неудовлетворительно одиннадцатикласснице.
+            </div>
+
+            <div class="box hp-manual"><i>hyphens: manual;</i>
+                Восьмидесятичетырёхлетняя константинопольская делопроизводительница
+                поставила оценку неудовлетворительно одиннадцатикласснице.
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="box hp-auto"><i>hyphens: auto;</i>
+                Восьмидесятичетырёхлетняя константинопольская делопроизводительница
+                поставила оценку неудовлетворительно одиннадцатикласснице.
+            </div>
+
+            <div class="box ow"><i>overflow-wrap: break-word</i>
+                Восьмидесятичетырёхлетняя константинопольская делопроизводительница
+                поставила оценку неудовлетворительно одиннадцатикласснице.
+            </div>
+        </div>
+</body>
+
+</html>

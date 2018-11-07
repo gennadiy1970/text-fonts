@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object-fit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section>
+            <h1>Object-fit</h1>
+            <p>Css-свойство <b>object-fit</b> определяет, как содержимое изменяемого элемента должно заполнять контейнер относительно его высоты и ширины.</p>
+        </section>
+        <section>
+                <p><a href="https://developer.mozilla.org/ru/docs/Web/CSS/object-fit">Документация на MDN</a></p>
+                <iframe src="https://developer.mozilla.org/ru/docs/Web/CSS/object-fit" frameborder="0"></iframe>
+        </section>
+        <section>
+                <p>Замена этого свойства на <a href="./img_as_svg/index.html"> svg для поддержки устаревших браузеров</a></p>
+                <iframe src="./img_as_svg/index.html" frameborder="0"></iframe>
+        </section>
+        <section>
+            <a href="https://caniuse.com/#search=object-fit"><h2>Поддержка браузерами</h2></a>
+            <iframe class="caniuse" src="https://caniuse.com/#search=object-fit" frameborder="0"></iframe>
+        </section>
+        <section>
+            <div class="bow-wrp">
+              <div class="title">fill</div>
+              <div class="box fill">
+                  <img src="./img/picture.jpg" alt="picture">
+              </div>
+            </div>
+        </section>
+        <section>
+            <div class="bow-wrp">
+              <div class="title">contain</div>
+              <div class="box contain">
+                  <img src="./img/picture.jpg" alt="picture">
+              </div>
+            </div>
+        </section>
+        <section>
+            <div class="bow-wrp">
+              <div class="title">cover</div>
+              <div class="box cover">
+                  <img src="./img/picture.jpg" alt="picture">
+              </div>
+            </div>
+        </section>
+        <section>
+            <div class="bow-wrp">
+              <div class="title">scale-down</div>
+              <div class="box scale-down">
+                  <img src="./img/picture.jpg" alt="picture">
+              </div>
+            </div>
+        </section>
+        <section>
+            <div class="bow-wrp">
+              <div class="title">none</div>
+              <div class="box none">
+                  <img src="./img/picture.jpg" alt="picture">
+              </div>
+            </div>
+        </section>
+        <section>
+            <pre><code>
+img {
+  width: 100%;
+  <span class="comment">height: auto;</span>
+  height: 256px;
+}
+            </code></pre>
+        </section>
+    </div>
+   <script src="./js/app.js"></script>
+</body>
+</html>

@@ -10,15 +10,22 @@
     body {
       font-family: 'Tangerine', serif;
       font-size: 48px;
+      background: #eef;
+    }
+
+    h1,
+    h4 {
       text-shadow: 4px 4px 4px #aaa;
     }
 
     .wrapper {
+      background: #fff;
       width: 750px;
-      height: 800px;
+      padding-top: 1px;
+      padding-bottom: 1rem;
       margin: auto;
-      background: hsla(225, 50%, 50%, 0.3);
-      ;
+      color: #228;
+      box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
     }
 
     span {
@@ -27,6 +34,34 @@
 
     h4 {
       font-family: sans-serif;
+    }
+    h3,
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr,
+    caption {
+      font-family: monospace;
+      font-size: 24px;
+      padding: 0 1rem;
+      color: #822;
+    }
+
+    table {
+      border-collapse: collapse;
+      box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+      margin-left: 1rem;
+    }
+
+    td,
+    th {
+      border-right: 1px solid grey;
+    }
+
+    tbody tr:first-of-type {
+      background: #eef;
     }
 
     .google-font {
@@ -40,29 +75,90 @@
     <h1>
       <span>Making the Web Beautiful!</span>
     </h1>
-    <!-- 
-    browser   width
-    Google    705.69px
-    FireFox   747.933px
-  -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nostrum delectus unde libero. Saepe consectetur quidem
-      doloremque, officia dicta voluptate animi ad quam esse ratione commodi vero dolorem nihil eum.</p>
+    <div style="display: flex; ">
+        <h3> font-family: 'Tangerine' </h3>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            browser
+          </th>
+          <th>
+            width
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google</td>
+          <td>705.69px</td>
+        </tr>
+        <tr>
+          <td>FireFox</td>
+          <td>747.933px</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nostrum delectus unde libero. Saepe consectetur quidem -->
+    <!-- doloremque, officia dicta voluptate animi ad quam esse ratione commodi vero dolorem nihil eum.</p> -->
     <h4>
       <span>Making the Web Beautiful!</span>
     </h4>
-    <!-- 
-        browser   width
-        Google    599.13px
-        FireFox   599.117px
-      -->
+    <div style="display: flex; ">
+        <h3> font-family: sans-serif </h3>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            browser
+          </th>
+          <th>
+            width
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google</td>
+          <td>599.13px</td>
+        </tr>
+        <tr>
+          <td>FireFox</td>
+          <td>599.117px</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
     <h4 class="google-font">
       <span>Making the Web Beautiful!</span>
     </h4>
-    <!-- 
-                browser   width
-                Google    531.55px
-                FireFox   552.667px
-              -->
+    <div style="display: flex; ">
+        <h3> font-family:'Philosopher'</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                browser
+              </th>
+              <th>
+                width
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google</td>
+              <td>531.55px</td>
+            </tr>
+            <tr>
+              <td>FireFox</td>
+              <td>552.667px</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        
   </div>
 </body>
 

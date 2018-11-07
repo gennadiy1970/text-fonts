@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    color: #335;
+    background: #88d;
+}
+
+.wrapper {
+    width: 90%;
+    margin: auto;
+    background: #fff;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #559;
+}
+
+.image-cover {
+    object-fit: cover;
+}
+
+.image {
+    width: 100%;
+    min-width: 5rem;
+    max-width: 50rem;
+    height: 256px;
+}
+h1, h3 { text-align: center; }
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.img-wrp {
+    width: 30%;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+}
+.gold {
+    color: orangered;
+    font-size: 24px;
+}
+.gold pre {
+    overflow: auto;
+}

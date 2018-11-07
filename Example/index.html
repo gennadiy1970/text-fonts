@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example</title>
+    <style>
+        body {
+            background: #c2b280;
+        }
+
+        p {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .box {
+            width: 480px;
+            height: 600px;
+            margin: auto;
+            font-size: 160px;
+            font-weight: bold;
+            font-family: 'Alfa Slab One', cursive;
+            color: transparent;
+            background-color: #fff;
+            background-image: url(https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&h=350);
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script>
+        const box = document.querySelector('.box')
+        box.textContent = `Лето ${(new Date().getFullYear())}`.toUpperCase();
+    </script>
+</body>
+
+</html>
